@@ -1,6 +1,6 @@
 package com.Sam.SpringDemo.rest;
 
-import com.Sam.util.Coach;
+import com.Sam.SpringDemo.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

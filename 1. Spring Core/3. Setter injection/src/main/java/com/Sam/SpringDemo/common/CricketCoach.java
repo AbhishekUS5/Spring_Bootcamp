@@ -1,4 +1,4 @@
-package com.Sam.util;
+package com.Sam.SpringDemo.common;
 
 import org.springframework.stereotype.Component;
 
