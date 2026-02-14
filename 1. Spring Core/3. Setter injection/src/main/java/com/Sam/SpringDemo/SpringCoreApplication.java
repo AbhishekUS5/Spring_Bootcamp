@@ -3,10 +3,7 @@ package com.Sam.SpringDemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {
-		"com.Sam.SpringDemo",
-		"com.Sam.util"
-		})
+@SpringBootApplication
 public class SpringCoreApplication
 	{
 		// Component Scanning
