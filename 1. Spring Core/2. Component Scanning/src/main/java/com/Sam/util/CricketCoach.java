@@ -1,4 +1,4 @@
-package com.Sam.springCore;
+package com.Sam.util;
 
 import org.springframework.stereotype.Component;
 
