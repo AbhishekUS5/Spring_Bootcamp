@@ -18,7 +18,8 @@ public class HibernateApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
 		return runner -> {
 //			createStudent(studentDAO);
-			createMultipleStudent(studentDAO);
+			// createMultipleStudent(studentDAO);
+			readStudent(studentDAO);
 		};
 	}
 
@@ -30,6 +31,26 @@ public class HibernateApplication {
 		// save the student objects
 		System.out.println("Saving the student...");
 		studentDAO.save(tempStudent);
+	}
+
+	private void readStudent(StudentDAO studentDAO){
+		// create a student object
+		System.out.println("Creating new Student");
+		Student tempStudent1 = new Student("John","Smith","john@gmail.com");
+
+		// save the student object
+		System.out.println("Saving the student");
+		studentDAO.save(tempStudent1);
+
+		// display id of the saved student
+		System.out.println("Saved student. Generated id" + tempStudent1.getId());
+
+		// retrieve the student based on the id
+		System.out.println("\nRetrieving student with id: "+ tempStudent1.getId());
+
+		Student myStudent = studentDAO.findById(tempStudent1.getId());
+
+		System.out.println("FOund the student: " +myStudent);
 	}
 
 	private void createMultipleStudent(StudentDAO studentDAO) {
