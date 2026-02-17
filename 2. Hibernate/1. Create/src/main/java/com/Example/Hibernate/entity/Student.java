@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name="student")
-public class student {
+public class Student {
     // define fields
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,16 +15,16 @@ public class student {
     private String firstName;
 
     @Column(name="last_name")
-    private int lastName;
+    private String lastName;
 
     @Column(name="email")
     private String email;
 
     // define constructors
-    public student() {
+    public Student() {
     }
 
-    public student(String firstName, int lastName, String email) {
+    public Student(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -48,11 +48,11 @@ public class student {
         this.firstName = firstName;
     }
 
-    public int getLastName() {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(int lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
